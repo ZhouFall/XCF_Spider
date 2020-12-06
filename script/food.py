@@ -59,8 +59,8 @@ class xiachufang():
             for food in foods:
                 title.append(food.find('a')['title'])
                 link.append(homepage+food.find('a')['href'])
-            #爬完一个网站后,等0.2s再爬下一个网站
-            sleep(0.2)
+            #爬完一个网站后,等1s再爬下一个网站
+            sleep(1)
             #输出到food.html文档
             with open(r'../data/food.html', 'ab+') as f:
                 f.write(res.content)
